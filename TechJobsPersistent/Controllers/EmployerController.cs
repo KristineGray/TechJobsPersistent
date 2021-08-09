@@ -22,7 +22,8 @@ namespace TechJobsPersistent.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            List<Employer> employers = _context.Employers.ToList();
+            return View(employers);
         }
 
         public IActionResult Add()
