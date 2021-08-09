@@ -28,7 +28,8 @@ namespace TechJobsPersistent.Controllers
 
         public IActionResult Add()
         {
-            return View();
+            AddEmployerViewModel addEmployerViewModel = new AddEmployerViewModel();
+            return View(addEmployerViewModel);
         }
 
         public IActionResult ProcessAddEmployerForm()
