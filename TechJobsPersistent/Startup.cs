@@ -26,7 +26,7 @@ namespace TechJobsPersistent
         {
             services.AddControllersWithViews();
 
-            string connectionString = "server=localhost;user=root;password=1234;database=ef";
+            string connectionString = "server=localhost;user=techjobs;password=Techjob$pw02!;database=techjobs";
             MySqlServerVersion serverVersion = new MySqlServerVersion(new Version(8, 0, 25));
             services.AddDbContext<TechJobsDbContext>(options => options.UseMySql(connectionString, serverVersion));
         }
