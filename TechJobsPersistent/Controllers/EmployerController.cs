@@ -41,8 +41,7 @@ namespace TechJobsPersistent.Controllers
                     Name = addEmployerViewModel.Name,
                     Location = addEmployerViewModel.Location
                 };
-                ViewBag.success = "Success! New Employer Added!";
-                return View();
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
