@@ -32,8 +32,18 @@ namespace TechJobsPersistent.Controllers
             return View(addEmployerViewModel);
         }
 
-        public IActionResult ProcessAddEmployerForm()
+        public IActionResult ProcessAddEmployerForm(AddEmployerViewModel addEmployerViewModel)
         {
+            if (ModelState.IsValid)
+            {
+                Employer newEmployer = new Employer
+                {
+                    Name = addEmployerViewModel.Name,
+                    Location = addEmployerViewModel.Location
+                };
+                ViewBag.success = "Success! New Employer Added!";
+                return View();
+            }
             return View();
         }
 
